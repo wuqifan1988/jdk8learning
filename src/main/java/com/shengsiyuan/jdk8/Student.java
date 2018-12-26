@@ -35,4 +35,10 @@ public class Student {
     public String toString() {
         return this.getName() + ": " + this.getAge();
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        Student student = (Student)obj;
+        return this.getAge() == student.getAge() && this.getName().equals(student.getName());
+    }
 }
